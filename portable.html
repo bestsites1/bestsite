@@ -1,10 +1,10 @@
-  <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="fr">
 
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Menu Modernisé</title>
+    <title>Chloro’Bulle - Bienvenue</title>
     <style>
         body {
             margin: 0;
@@ -36,6 +36,7 @@
         /* Dropdown container */
         .dropdown {
             position: relative;
+            display: inline-block;
         }
 
         .dropdown-content {
@@ -43,7 +44,7 @@
             position: absolute;
             background-color: #444;
             min-width: 200px;
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
             z-index: 1;
             border-radius: 5px;
         }
@@ -66,6 +67,42 @@
 
         .dropdown:hover .dropbtn {
             background-color: #575757;
+        }
+
+        /* Header principal */
+        header {
+            background-image: url('1.jpg'); /* Remplacez par votre image */
+            background-size: cover;
+            background-position: center;
+            height: 50vh;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 3em;
+            margin: 0;
+        }
+
+        header p {
+            font-size: 1.2em;
+            margin-top: 10px;
+        }
+
+        /* Section principale */
+        .main-content {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .main-content img {
+            width: 100%;
+            max-width: 400px;
+            border-radius: 10px;
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
         }
 
         /* Responsive Menu */
@@ -114,14 +151,20 @@
         <a href="argument vc.pdf">Nous contacter</a>
     </div>
 
+    <!-- En-tête principal -->
+    <header>
+        <div>
+            <h1>Bienvenue chez Chloro’Bulle</h1>
+            <p>Plantons aujourd'hui l'Abondance de demain</p>
+        </div>
+    </header>
+
     <!-- Contenu principal -->
-    <h1 style="text-align: center; margin-top: 50px; color: #333;">
-        Bienvenue chez Chloro’Bulle
-    </h1>
-    <p style="text-align: center; font-size: 1.2em; color: #666;">
-        Plantons aujourd'hui l'Abondance de demain.
-    </p>
+    <div class="main-content">
+        <h2>Nos Réalisations</h2>
+        <p>Découvrez nos projets récents et nos initiatives pour créer un avenir durable.</p>
+        <img src="forest-project.jpg" alt="Projet forêt nourricière"> <!-- Remplacez par votre image -->
+    </div>
 </body>
 
 </html>
-
