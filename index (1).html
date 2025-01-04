@@ -1,75 +1,157 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>La feuille de Chloro'Bulle n° 1</title>
+    <title>Bienvenue chez Chloro’Bulle</title>
     <style>
         body {
+            background-image: url('1.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
             margin: 0;
-            padding: 0;
+            font-family: Arial, sans-serif;
         }
 
-        iframe {
+        .menu {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 10px;
+            flex-wrap: wrap;
+            position: absolute;
+            top: 0;
             width: 100%;
-            height: 100vh;
-            border: none;
+            z-index: 100;
+        }
+
+        .menu a {
+            margin: 0 15px;
+            color: white;
+            text-decoration: none;
+            font-size: 1.2em;
+        }
+
+        .menu a:hover {
+            color: #017bf5;
+        }
+
+        .dropdown {
+            position: relative;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: rgba(0, 0, 0, 0.9);
+            top: 100%;
+            left: 0;
+            min-width: 200px;
+            z-index: 1;
+            text-align: left;
+        }
+
+        .dropdown-content a {
+            color: white;
+            padding: 10px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #017bf5;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        h1 {
+            text-align: center;
+            color: #83F83F;
+            font-family: 'Miniver', cursive;
+            font-size: 3em;
+            margin-top: 150px;
+            line-height: 1.4;
+            text-shadow: 1px 1px 2px #000;
+        }
+
+        .button {
+            display: block;
+            width: fit-content;
+            margin: 30px auto;
+            padding: 15px 30px;
+            font-size: 1.5em;
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            border: 2px solid white;
+            background-color: rgba(0, 0, 0, 0.5);
+            cursor: pointer;
+            text-shadow: 1px 1px 2px #000;
+        }
+
+        .button:hover {
+            background-color: white;
+            color: black;
+        }
+
+        @media (max-width: 768px) {
+            .menu {
+                flex-direction: column;
+                align-items: center;
+                padding: 10px 0;
+            }
+
+            .menu a {
+                font-size: 1em;
+                margin: 5px 0;
+            }
+
+            h1 {
+                font-size: 2em;
+                margin-top: 120px;
+            }
+
+            .button {
+                font-size: 1.2em;
+                padding: 10px 20px;
+            }
+
+            .dropdown-content {
+                position: relative;
+                width: 100%;
+                text-align: center;
+            }
         }
     </style>
 </head>
-<body>
-    <iframe src="La feuille de Chloro'Bulle n° 1.pdf" title="La feuille de Chloro'Bulle n° 1"></iframe>
-</body>
-</html>
-Exemple : pdf2.html
-html
-Copy code
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>La feuille de Chloro'Bulle n° 2</title>
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-        }
 
-        iframe {
-            width: 100%;
-            height: 100vh;
-            border: none;
-        }
-    </style>
-</head>
 <body>
-    <iframe src="La feuille de Chloro'Bulle n° 2.pdf" title="La feuille de Chloro'Bulle n° 2"></iframe>
-</body>
-</html>
-Exemple : pdf3.html
-html
-Copy code
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>La feuille de Chloro'Bulle n° 3</title>
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-        }
+    <div class="menu">
+        <a href="#"><img src="Facebook.png" alt="Facebook" width="30" height="30"></a>
+        <a href="#"><img src="images.jfif" alt="Instagram" width="30" height="30"></a>
+        <a href="#">Accueil</a>
+        <div class="dropdown">
+            <a href="#">Qui nous sommes?</a>
+            <div class="dropdown-content">
+                <a href="#">Qu’est-ce qu’une forêt nourricière?</a>
+                <a href="#">Nos valeurs</a>
+                <a href="#">Qui sommes-nous</a>
+            </div>
+        </div>
+        <a href="#">Portfolio</a>
+        <a href="#">Videos</a>
+        <a href="#">L'actualité de Chloro’Bulle</a>
+        <a href="#">Nous soutenir</a>
+        <a href="#">Nous contacter</a>
+    </div>
 
-        iframe {
-            width: 100%;
-            height: 100vh;
-            border: none;
-        }
-    </style>
-</head>
-<body>
-    <iframe src="La feuille de Chloro'Bulle n° 3.pdf" title="La feuille de Chloro'Bulle n° 3"></iframe>
+    <h1>Bienvenue chez Chloro’Bulle<br>Plantons aujourd'hui l'Abondance de demain</h1>
+    <a href="#" class="button">Rejoindre Chloro'Bulle</a>
 </body>
+
 </html>
