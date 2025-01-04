@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="fr">
 
 <head>
@@ -91,6 +91,17 @@
             color: #83F83F;
         }
     </style>
+    <script>
+        // Fonction pour détecter un appareil mobile
+        function isMobileDevice() {
+            return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+        }
+
+        // Redirection en fonction du type d'appareil
+        if (isMobileDevice()) {
+            window.location.href = "portable.html"; // Redirige vers la page mobile
+        }
+    </script>
 </head>
 
 <body>
@@ -105,7 +116,6 @@
         &nbsp;&nbsp;&nbsp;&nbsp;
         <font face="cinzel" size="4">
             <a href="#">Accueil</a>&nbsp;&nbsp;&nbsp;&nbsp;
-            <!-- Dropdown menu for "Qui nous sommes?" -->
             <div class="dropdown">
                 <a href="#" class="dropbtn">Qui nous sommes?</a>&nbsp;&nbsp;&nbsp;&nbsp;
                 <div class="dropdown-content">
@@ -116,7 +126,6 @@
             </div>
             <a target="_blank" rel="noopener noreferrer" href="Portfolio.html">Portfolio</a>&nbsp;&nbsp;
             <a href="#">Videos</a>&nbsp;&nbsp;&nbsp;&nbsp;
-            <!-- Dropdown menu for "l'actualité de Chloro’Bulle" -->
             <div class="dropdown">
                 <a href="#" class="dropbtn">l'actualité de Chloro’Bulle</a>&nbsp;&nbsp;&nbsp;&nbsp;
                 <div class="dropdown-content">
