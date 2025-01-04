@@ -3,155 +3,148 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bienvenue chez Chloro’Bulle</title>
+    <title>
+        Beautiful and Simple Website Using HTML Only -- Fullyworld Web Tutorials
+    </title>
     <style>
         body {
             background-image: url('1.jpg');
             background-repeat: no-repeat;
             background-size: cover;
             background-position: center;
+            background-attachment: fixed;
+            height: 100vh;
             margin: 0;
-            font-family: Arial, sans-serif;
         }
 
-        .menu {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background-color: rgba(0, 0, 0, 0.5);
-            padding: 10px;
-            flex-wrap: wrap;
-            position: absolute;
-            top: 0;
-            width: 100%;
-            z-index: 100;
-        }
-
-        .menu a {
-            margin: 0 15px;
+        a {
             color: white;
             text-decoration: none;
-            font-size: 1.2em;
         }
 
-        .menu a:hover {
+        a:hover {
             color: #017bf5;
+            text-decoration: underline;
+        }
+
+        .button {
+            cursor: pointer;
+            border: 1px solid #000b;
+            background-color: rgba(24, 100, 171, 0.1);
+            height: 100px;
+            width: 200px;
+            color: #fff;
+            font-size: 1.5em;
+            box-shadow: 0 6px 6px rgba(0, 0, 0, 0.6);
+            padding: 16px 32px;
+            text-align: center;
+            display: inline-block;
+            transition-duration: 0.4s;
+            font-style: italic;
+        }
+
+        .button1 {
+            background-color: transparent;
+            color: white;
+            border: 2px solid #000;
+        }
+
+        .button1:hover {
+            background-color: #fff;
+            color: black;
+        }
+
+        .italic {
+            font-style: italic;
         }
 
         .dropdown {
             position: relative;
+            display: inline-block;
         }
 
         .dropdown-content {
             display: none;
             position: absolute;
-            background-color: rgba(0, 0, 0, 0.9);
-            top: 100%;
-            left: 0;
+            background-color: transparent;
             min-width: 200px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
             z-index: 1;
-            text-align: left;
         }
 
         .dropdown-content a {
             color: white;
-            padding: 10px;
+            padding: 12px 16px;
             text-decoration: none;
             display: block;
         }
 
         .dropdown-content a:hover {
-            background-color: #017bf5;
+            background-color: #f1f1f1;
         }
 
         .dropdown:hover .dropdown-content {
             display: block;
         }
 
-        h1 {
-            text-align: center;
+        .dropdown:hover .dropbtn {
             color: #83F83F;
-            font-family: 'Miniver', cursive;
-            font-size: 3em;
-            margin-top: 150px;
-            line-height: 1.4;
-            text-shadow: 1px 1px 2px #000;
-        }
-
-        .button {
-            display: block;
-            width: fit-content;
-            margin: 30px auto;
-            padding: 15px 30px;
-            font-size: 1.5em;
-            color: white;
-            text-align: center;
-            text-decoration: none;
-            border: 2px solid white;
-            background-color: rgba(0, 0, 0, 0.5);
-            cursor: pointer;
-            text-shadow: 1px 1px 2px #000;
-        }
-
-        .button:hover {
-            background-color: white;
-            color: black;
-        }
-
-        @media (max-width: 768px) {
-            .menu {
-                flex-direction: column;
-                align-items: center;
-                padding: 10px 0;
-            }
-
-            .menu a {
-                font-size: 1em;
-                margin: 5px 0;
-            }
-
-            h1 {
-                font-size: 2em;
-                margin-top: 120px;
-            }
-
-            .button {
-                font-size: 1.2em;
-                padding: 10px 20px;
-            }
-
-            .dropdown-content {
-                position: relative;
-                width: 100%;
-                text-align: center;
-            }
         }
     </style>
 </head>
 
 <body>
-    <div class="menu">
-        <a href="#"><img src="Facebook.png" alt="Facebook" width="30" height="30"></a>
-        <a href="#"><img src="images.jfif" alt="Instagram" width="30" height="30"></a>
-        <a href="#">Accueil</a>
-        <div class="dropdown">
-            <a href="#">Qui nous sommes?</a>
-            <div class="dropdown-content">
-                <a href="#">Qu’est-ce qu’une forêt nourricière?</a>
-                <a href="#">Nos valeurs</a>
-                <a href="#">Qui sommes-nous</a>
+    <br />
+    <h3 align="left">
+        <a target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/profile.php?id=100087051957183">
+            <img src="Facebook.png" width="50" height="50" />
+        </a>
+        <a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/association__chlorobulle/">
+            <img src="images.jfif" width="50" height="50" />
+        </a>
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        <font face="cinzel" size="4">
+            <a href="#">Accueil</a>&nbsp;&nbsp;&nbsp;&nbsp;
+            <!-- Dropdown menu for "Qui nous sommes?" -->
+            <div class="dropdown">
+                <a href="#" class="dropbtn">Qui nous sommes?</a>&nbsp;&nbsp;&nbsp;&nbsp;
+                <div class="dropdown-content">
+                    <a target="_blank" rel="noopener noreferrer" href="Qu’est-ce qu’une forêt nourricière.pdf">Qu’est-ce qu’une forêt nourricière?</a>
+                    <a target="_blank" rel="noopener noreferrer" href="Valeurs.pdf">Nos valeurs</a>
+                    <a target="_blank" rel="noopener noreferrer" href="QUI SOMMES-NOUS.pdf">Qui sommes-nous</a>
+                </div>
             </div>
-        </div>
-        <a href="#">Portfolio</a>
-        <a href="#">Videos</a>
-        <a href="#">L'actualité de Chloro’Bulle</a>
-        <a href="#">Nous soutenir</a>
-        <a href="#">Nous contacter</a>
-    </div>
+            <a target="_blank" rel="noopener noreferrer" href="Portfolio.html">Portfolio</a>&nbsp;&nbsp;
+            <a href="#">Videos</a>&nbsp;&nbsp;&nbsp;&nbsp;
+            <!-- Dropdown menu for "l'actualité de Chloro’Bulle" -->
+            <div class="dropdown">
+                <a href="#" class="dropbtn">l'actualité de Chloro’Bulle</a>&nbsp;&nbsp;&nbsp;&nbsp;
+                <div class="dropdown-content">
+                    <a target="_blank" rel="noopener noreferrer" href="La feuille de Chloro'Bulle n° 1.pdf">La feuille de Chloro'Bulle n° 1</a>
+                    <a target="_blank" rel="noopener noreferrer" href="La feuille de Chloro'Bulle n° 2.pdf">La feuille de Chloro'Bulle n° 2</a>
+                    <a target="_blank" rel="noopener noreferrer" href="La feuille de Chloro'Bulle n° 3.pdf">La feuille de Chloro'Bulle n° 3</a>
+                </div>
+            </div>
+            <a target="_blank" rel="noopener noreferrer" href="soutenir.pdf">Nous soutenir</a>&nbsp;&nbsp;
+            <a target="_blank" rel="noopener noreferrer" href="argument vc.pdf">Nous contacter</a>&nbsp;&nbsp;
+        </font>
+    </h3>
 
-    <h1>Bienvenue chez Chloro’Bulle<br>Plantons aujourd'hui l'Abondance de demain</h1>
-    <a href="#" class="button">Rejoindre Chloro'Bulle</a>
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <h1 align="center">
+        <font face="Miniver" color="#83F83F" size="7" class="italic">
+            Bienvenue chez Chloro’Bulle
+            <br />
+            Plantons aujourd'hui l'Abondance de demain
+        </font>
+    </h1>
+    <br />
+    <h3 align="center">
+        <a href="#">
+            <button class="button button1">Rejoindre Chloro'Bulle</button>
+            <br /><br />
+        </a>
+    </h3>
 </body>
 
 </html>
