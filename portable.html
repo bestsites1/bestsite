@@ -1,63 +1,39 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="fr">
 
 <head>
     <meta charset="utf-8">
-    <title>
-        Beautiful and Simple Website Using HTML Only -- Fullyworld Web Tutorials
-    </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chloro’Bulle - Bienvenue</title>
     <style>
         body {
-            background-image: url('1.jpg');
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
-            height: 100vh;
             margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
         }
 
-        a {
+        /* Barre de navigation */
+        .navbar {
+            background-color: #333;
+            overflow: hidden;
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 20px;
+        }
+
+        .navbar a {
             color: white;
             text-decoration: none;
-        }
-
-        a:hover {
-            color: #017bf5;
-            text-decoration: underline;
-        }
-
-        .button {
-            cursor: pointer;
-            border: 1px solid #000b;
-            background-color: rgba(24, 100, 171, 0.1);
-            height: 100px;
-            width: 200px;
-            color: #fff;
-            font-size: 1.5em;
-            box-shadow: 0 6px 6px rgba(0, 0, 0, 0.6);
-            padding: 16px 32px;
-            text-align: center;
+            padding: 14px 20px;
             display: inline-block;
-            transition-duration: 0.4s;
-            font-style: italic;
         }
 
-        .button1 {
-            background-color: transparent;
-            color: white;
-            border: 2px solid #000;
+        .navbar a:hover {
+            background-color: #575757;
+            transition: 0.3s;
         }
 
-        .button1:hover {
-            background-color: #fff;
-            color: black;
-        }
-
-        .italic {
-            font-style: italic;
-        }
-
+        /* Dropdown container */
         .dropdown {
             position: relative;
             display: inline-block;
@@ -66,10 +42,11 @@
         .dropdown-content {
             display: none;
             position: absolute;
-            background-color: transparent;
+            background-color: #444;
             min-width: 200px;
-            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
             z-index: 1;
+            border-radius: 5px;
         }
 
         .dropdown-content a {
@@ -77,10 +54,11 @@
             padding: 12px 16px;
             text-decoration: none;
             display: block;
+            border-bottom: 1px solid #575757;
         }
 
         .dropdown-content a:hover {
-            background-color: #f1f1f1;
+            background-color: #575757;
         }
 
         .dropdown:hover .dropdown-content {
@@ -88,72 +66,105 @@
         }
 
         .dropdown:hover .dropbtn {
-            color: #83F83F;
-        }
-    </style>
-    <script>
-        // Fonction pour détecter un appareil mobile
-        function isMobileDevice() {
-            return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+            background-color: #575757;
         }
 
-        // Redirection en fonction du type d'appareil
-        if (isMobileDevice()) {
-            window.location.href = "portable.html"; // Redirige vers la page mobile
+        /* Header principal */
+        header {
+            background-image: url('header-image.jpg'); /* Remplacez par votre image */
+            background-size: cover;
+            background-position: center;
+            height: 50vh;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
         }
-    </script>
+
+        header h1 {
+            font-size: 3em;
+            margin: 0;
+        }
+
+        header p {
+            font-size: 1.2em;
+            margin-top: 10px;
+        }
+
+        /* Section principale */
+        .main-content {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .main-content img {
+            width: 100%;
+            max-width: 400px;
+            border-radius: 10px;
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Responsive Menu */
+        @media screen and (max-width: 768px) {
+            .navbar {
+                flex-direction: column;
+            }
+
+            .navbar a,
+            .dropdown {
+                width: 100%;
+                text-align: left;
+                padding: 10px 0;
+            }
+
+            .dropdown-content {
+                position: relative;
+                width: 100%;
+            }
+        }
+    </style>
 </head>
 
 <body>
-    <br />
-    <h3 align="left">
-        <a target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/profile.php?id=100087051957183">
-            <img src="Facebook.png" width="50" height="50" />
-        </a>
-        <a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/association__chlorobulle/">
-            <img src="images.jfif" width="50" height="50" />
-        </a>
-        &nbsp;&nbsp;&nbsp;&nbsp;
-        <font face="cinzel" size="4">
-            <a href="#">Accueil</a>&nbsp;&nbsp;&nbsp;&nbsp;
-            <div class="dropdown">
-                <a href="#" class="dropbtn">Qui nous sommes?</a>&nbsp;&nbsp;&nbsp;&nbsp;
-                <div class="dropdown-content">
-                    <a target="_blank" rel="noopener noreferrer" href="Qu’est-ce qu’une forêt nourricière.pdf">Qu’est-ce qu’une forêt nourricière?</a>
-                    <a target="_blank" rel="noopener noreferrer" href="Valeurs.pdf">Nos valeurs</a>
-                    <a target="_blank" rel="noopener noreferrer" href="QUI SOMMES-NOUS.pdf">Qui sommes-nous</a>
-                </div>
+    <!-- Barre de navigation -->
+    <div class="navbar">
+        <a href="#">Accueil</a>
+        <a href="#">Portfolio</a>
+        <div class="dropdown">
+            <a href="#" class="dropbtn">Qui nous sommes ?</a>
+            <div class="dropdown-content">
+                <a href="Qu’est-ce qu’une forêt nourricière.pdf">Qu’est-ce qu’une forêt nourricière ?</a>
+                <a href="Valeurs.pdf">Nos valeurs</a>
+                <a href="QUI SOMMES-NOUS.pdf">Qui sommes-nous</a>
             </div>
-            <a target="_blank" rel="noopener noreferrer" href="Portfolio.html">Portfolio</a>&nbsp;&nbsp;
-            <a href="#">Videos</a>&nbsp;&nbsp;&nbsp;&nbsp;
-            <div class="dropdown">
-                <a href="#" class="dropbtn">l'actualité de Chloro’Bulle</a>&nbsp;&nbsp;&nbsp;&nbsp;
-                <div class="dropdown-content">
-                    <a target="_blank" rel="noopener noreferrer" href="La feuille de Chloro'Bulle n° 1.pdf">La feuille de Chloro'Bulle n° 1</a>
-                    <a target="_blank" rel="noopener noreferrer" href="La feuille de Chloro'Bulle n° 2.pdf">La feuille de Chloro'Bulle n° 2</a>
-                    <a target="_blank" rel="noopener noreferrer" href="La feuille de Chloro'Bulle n° 3.pdf">La feuille de Chloro'Bulle n° 3</a>
-                </div>
+        </div>
+        <div class="dropdown">
+            <a href="#" class="dropbtn">L'actualité</a>
+            <div class="dropdown-content">
+                <a href="La feuille de Chloro'Bulle n° 1.pdf">La feuille de Chloro'Bulle n° 1</a>
+                <a href="La feuille de Chloro'Bulle n° 2.pdf">La feuille de Chloro'Bulle n° 2</a>
+                <a href="La feuille de Chloro'Bulle n° 3.pdf">La feuille de Chloro'Bulle n° 3</a>
             </div>
-            <a target="_blank" rel="noopener noreferrer" href="soutenir.pdf">Nous soutenir</a>&nbsp;&nbsp;
-            <a target="_blank" rel="noopener noreferrer" href="argument vc.pdf">Nous contacter</a>&nbsp;&nbsp;
-        </font>
-    </h3>
+        </div>
+        <a href="soutenir.pdf">Nous soutenir</a>
+        <a href="argument vc.pdf">Nous contacter</a>
+    </div>
 
-    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
-    <h1 align="center">
-        <font face="Miniver" color="#83F83F" size="7" class="italic">
-            Bienvenue chez Chloro’Bulle
-            <br />
-            Plantons aujourd'hui l'Abondance de demain
-        </font>
-    </h1>
-    <br />
-    <h3 align="center">
-        <a href="#">
-            <button class="button button1">Rejoindre Chloro'Bulle</button>
-            <br /><br />
-        </a>
-    </h3>
+    <!-- En-tête principal -->
+    <header>
+        <div>
+            <h1>Bienvenue chez Chloro’Bulle</h1>
+            <p>Plantons aujourd'hui l'Abondance de demain</p>
+        </div>
+    </header>
+
+    <!-- Contenu principal -->
+    <div class="main-content">
+        <h2>Nos Réalisations</h2>
+        <p>Découvrez nos projets récents et nos initiatives pour créer un avenir durable.</p>
+        <img src="forest-project.jpg" alt="Projet forêt nourricière"> <!-- Remplacez par votre image -->
+    </div>
 </body>
 
-</html> that great but the background picture needs to be undder the dark header
+</html>
