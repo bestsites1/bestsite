@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="fr">
 
 <head>
@@ -7,33 +7,40 @@
     <title>Chloro’Bulle - Bienvenue</title>
     <style>
         body {
+            background-image: url('1.jpg'); /* Ensure this is the correct path to your background image */
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
             margin: 0;
             font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
         }
 
-        /* Barre de navigation */
-        .navbar {
-            background-color: #333;
-            overflow: hidden;
-            display: flex;
-            justify-content: space-between;
+        /* Header (Dark Navigation Bar) */
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent dark background */
+            color: white;
             padding: 10px 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+            z-index: 1000;
         }
 
-        .navbar a {
+        .header a {
             color: white;
             text-decoration: none;
-            padding: 14px 20px;
+            padding: 10px 20px;
             display: inline-block;
         }
 
-        .navbar a:hover {
+        .header a:hover {
             background-color: #575757;
             transition: 0.3s;
         }
 
-        /* Dropdown container */
         .dropdown {
             position: relative;
             display: inline-block;
@@ -42,11 +49,10 @@
         .dropdown-content {
             display: none;
             position: absolute;
-            background-color: #444;
+            background-color: rgba(0, 0, 0, 0.9); /* Dark dropdown menu */
             min-width: 200px;
             box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
-            z-index: 1;
-            border-radius: 5px;
+            z-index: 999;
         }
 
         .dropdown-content a {
@@ -54,7 +60,6 @@
             padding: 12px 16px;
             text-decoration: none;
             display: block;
-            border-bottom: 1px solid #575757;
         }
 
         .dropdown-content a:hover {
@@ -69,68 +74,53 @@
             background-color: #575757;
         }
 
-        /* Header principal */
-        header {
-            background-image: url('header-image.jpg'); /* Remplacez par votre image */
-            background-size: cover;
-            background-position: center;
-            height: 50vh;
+        /* Main Content */
+        .content {
+            margin-top: 100px; /* Add margin to account for the fixed header */
+            text-align: center;
             color: white;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-        }
-
-        header h1 {
-            font-size: 3em;
-            margin: 0;
-        }
-
-        header p {
-            font-size: 1.2em;
-            margin-top: 10px;
-        }
-
-        /* Section principale */
-        .main-content {
-            text-align: center;
             padding: 20px;
         }
 
-        .main-content img {
-            width: 100%;
-            max-width: 400px;
-            border-radius: 10px;
-            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+        .button {
+            cursor: pointer;
+            border: 1px solid #000b;
+            background-color: rgba(24, 100, 171, 0.1);
+            height: 100px;
+            width: 200px;
+            color: #fff;
+            font-size: 1.5em;
+            box-shadow: 0 6px 6px rgba(0, 0, 0, 0.6);
+            padding: 16px 32px;
+            text-align: center;
+            display: inline-block;
+            transition-duration: 0.4s;
+            font-style: italic;
         }
 
-        /* Responsive Menu */
-        @media screen and (max-width: 768px) {
-            .navbar {
-                flex-direction: column;
-            }
+        .button1 {
+            background-color: transparent;
+            color: white;
+            border: 2px solid #000;
+        }
 
-            .navbar a,
-            .dropdown {
-                width: 100%;
-                text-align: left;
-                padding: 10px 0;
-            }
-
-            .dropdown-content {
-                position: relative;
-                width: 100%;
-            }
+        .button1:hover {
+            background-color: #fff;
+            color: black;
         }
     </style>
 </head>
 
 <body>
-    <!-- Barre de navigation -->
-    <div class="navbar">
+    <!-- Header -->
+    <div class="header">
+        <a target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/profile.php?id=100087051957183">
+            <img src="Facebook.png" width="30" height="30" alt="Facebook" />
+        </a>
+        <a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/association__chlorobulle/">
+            <img src="images.jfif" width="30" height="30" alt="Instagram" />
+        </a>
         <a href="#">Accueil</a>
-        <a href="#">Portfolio</a>
         <div class="dropdown">
             <a href="#" class="dropbtn">Qui nous sommes ?</a>
             <div class="dropdown-content">
@@ -139,6 +129,7 @@
                 <a href="QUI SOMMES-NOUS.pdf">Qui sommes-nous</a>
             </div>
         </div>
+        <a href="Portfolio.html">Portfolio</a>
         <div class="dropdown">
             <a href="#" class="dropbtn">L'actualité</a>
             <div class="dropdown-content">
@@ -151,19 +142,13 @@
         <a href="argument vc.pdf">Nous contacter</a>
     </div>
 
-    <!-- En-tête principal -->
-    <header>
-        <div>
-            <h1>Bienvenue chez Chloro’Bulle</h1>
-            <p>Plantons aujourd'hui l'Abondance de demain</p>
-        </div>
-    </header>
-
-    <!-- Contenu principal -->
-    <div class="main-content">
-        <h2>Nos Réalisations</h2>
-        <p>Découvrez nos projets récents et nos initiatives pour créer un avenir durable.</p>
-        <img src="forest-project.jpg" alt="Projet forêt nourricière"> <!-- Remplacez par votre image -->
+    <!-- Main Content -->
+    <div class="content">
+        <h1>Bienvenue chez Chloro’Bulle</h1>
+        <p>Plantons aujourd'hui l'Abondance de demain</p>
+        <a href="#">
+            <button class="button button1">Rejoindre Chloro'Bulle</button>
+        </a>
     </div>
 </body>
 
