@@ -1,85 +1,30 @@
- <!DOCTYPE html>
+  <!DOCTYPE html>
 <html lang="fr">
 
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chloro’Bulle - Bienvenue</title>
+    <title>
+        Beautiful and Simple Website Using HTML Only -- Fullyworld Web Tutorials
+    </title>
     <style>
         body {
-            background-image: url('1.jpg'); /* Ensure this is the correct path to your background image */
+            background-image: url('1.jpg');
             background-repeat: no-repeat;
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
+            height: 100vh;
             margin: 0;
-            font-family: Arial, sans-serif;
         }
 
-        /* Header (Dark Navigation Bar) */
-        .header {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent dark background */
-            color: white;
-            padding: 10px 20px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-            z-index: 1000;
-        }
-
-        .header a {
+        a {
             color: white;
             text-decoration: none;
-            padding: 10px 20px;
-            display: inline-block;
         }
 
-        .header a:hover {
-            background-color: #575757;
-            transition: 0.3s;
-        }
-
-        .dropdown {
-            position: relative;
-            display: inline-block;
-        }
-
-        .dropdown-content {
-            display: none;
-            position: absolute;
-            background-color: rgba(0, 0, 0, 0.9); /* Dark dropdown menu */
-            min-width: 200px;
-            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
-            z-index: 999;
-        }
-
-        .dropdown-content a {
-            color: white;
-            padding: 12px 16px;
-            text-decoration: none;
-            display: block;
-        }
-
-        .dropdown-content a:hover {
-            background-color: #575757;
-        }
-
-        .dropdown:hover .dropdown-content {
-            display: block;
-        }
-
-        .dropdown:hover .dropbtn {
-            background-color: #575757;
-        }
-
-        /* Main Content */
-        .content {
-            margin-top: 100px; /* Add margin to account for the fixed header */
-            text-align: center;
-            color: white;
-            padding: 20px;
+        a:hover {
+            color: #017bf5;
+            text-decoration: underline;
         }
 
         .button {
@@ -108,48 +53,107 @@
             background-color: #fff;
             color: black;
         }
+
+        .italic {
+            font-style: italic;
+        }
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: transparent;
+            min-width: 200px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            color: white;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #f1f1f1;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown:hover .dropbtn {
+            color: #83F83F;
+        }
     </style>
+    <script>
+        // Fonction pour détecter un appareil mobile
+        function isMobileDevice() {
+            return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+        }
+
+        // Redirection en fonction du type d'appareil
+        if (isMobileDevice()) {
+            window.location.href = "portable.html"; // Redirige vers la page mobile
+        }
+    </script>
 </head>
 
 <body>
-    <!-- Header -->
-    <div class="header">
+    <br />
+    <h3 align="left">
         <a target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/profile.php?id=100087051957183">
-            <img src="Facebook.png" width="30" height="30" alt="Facebook" />
+            <img src="Facebook.png" width="50" height="50" />
         </a>
         <a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/association__chlorobulle/">
-            <img src="images.jfif" width="30" height="30" alt="Instagram" />
+            <img src="images.jfif" width="50" height="50" />
         </a>
-        <a href="#">Accueil</a>
-        <div class="dropdown">
-            <a href="#" class="dropbtn">Qui nous sommes ?</a>
-            <div class="dropdown-content">
-                <a href="Qu’est-ce qu’une forêt nourricière.pdf">Qu’est-ce qu’une forêt nourricière ?</a>
-                <a href="Valeurs.pdf">Nos valeurs</a>
-                <a href="QUI SOMMES-NOUS.pdf">Qui sommes-nous</a>
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        <font face="cinzel" size="4">
+            <a href="#">Accueil</a>&nbsp;&nbsp;&nbsp;&nbsp;
+            <div class="dropdown">
+                <a href="#" class="dropbtn">Qui nous sommes?</a>&nbsp;&nbsp;&nbsp;&nbsp;
+                <div class="dropdown-content">
+                    <a target="_blank" rel="noopener noreferrer" href="Qu’est-ce qu’une forêt nourricière.pdf">Qu’est-ce qu’une forêt nourricière?</a>
+                    <a target="_blank" rel="noopener noreferrer" href="Valeurs.pdf">Nos valeurs</a>
+                    <a target="_blank" rel="noopener noreferrer" href="QUI SOMMES-NOUS.pdf">Qui sommes-nous</a>
+                </div>
             </div>
-        </div>
-        <a href="Portfolio.html">Portfolio</a>
-        <div class="dropdown">
-            <a href="#" class="dropbtn">L'actualité</a>
-            <div class="dropdown-content">
-                <a href="La feuille de Chloro'Bulle n° 1.pdf">La feuille de Chloro'Bulle n° 1</a>
-                <a href="La feuille de Chloro'Bulle n° 2.pdf">La feuille de Chloro'Bulle n° 2</a>
-                <a href="La feuille de Chloro'Bulle n° 3.pdf">La feuille de Chloro'Bulle n° 3</a>
+            <a target="_blank" rel="noopener noreferrer" href="Portfolio.html">Portfolio</a>&nbsp;&nbsp;
+            <a href="#">Videos</a>&nbsp;&nbsp;&nbsp;&nbsp;
+            <div class="dropdown">
+                <a href="#" class="dropbtn">l'actualité de Chloro’Bulle</a>&nbsp;&nbsp;&nbsp;&nbsp;
+                <div class="dropdown-content">
+                    <a target="_blank" rel="noopener noreferrer" href="La feuille de Chloro'Bulle n° 1.pdf">La feuille de Chloro'Bulle n° 1</a>
+                    <a target="_blank" rel="noopener noreferrer" href="La feuille de Chloro'Bulle n° 2.pdf">La feuille de Chloro'Bulle n° 2</a>
+                    <a target="_blank" rel="noopener noreferrer" href="La feuille de Chloro'Bulle n° 3.pdf">La feuille de Chloro'Bulle n° 3</a>
+                </div>
             </div>
-        </div>
-        <a href="soutenir.pdf">Nous soutenir</a>
-        <a href="argument vc.pdf">Nous contacter</a>
-    </div>
+            <a target="_blank" rel="noopener noreferrer" href="soutenir.pdf">Nous soutenir</a>&nbsp;&nbsp;
+            <a target="_blank" rel="noopener noreferrer" href="argument vc.pdf">Nous contacter</a>&nbsp;&nbsp;
+        </font>
+    </h3>
 
-    <!-- Main Content -->
-    <div class="content">
-        <h1>Bienvenue chez Chloro’Bulle</h1>
-        <p>Plantons aujourd'hui l'Abondance de demain</p>
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <h1 align="center">
+        <font face="Miniver" color="#83F83F" size="7" class="italic">
+            Bienvenue chez Chloro’Bulle
+            <br />
+            Plantons aujourd'hui l'Abondance de demain
+        </font>
+    </h1>
+    <br />
+    <h3 align="center">
         <a href="#">
             <button class="button button1">Rejoindre Chloro'Bulle</button>
+            <br /><br />
         </a>
-    </div>
+    </h3>
 </body>
 
 </html>
