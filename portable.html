@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="fr">
 
 <head>
@@ -33,14 +33,15 @@
             cursor: pointer;
             border: 1px solid #000b;
             background-color: rgba(24, 100, 171, 0.1);
-            height: 50px;
-            width: 150px;
+            height: 100px;
+            width: 200px;
             color: #fff;
-            font-size: 1em;
+            font-size: 1.5em;
             box-shadow: 0 6px 6px rgba(0, 0, 0, 0.6);
-            padding: 10px 20px;
+            padding: 16px 32px;
             text-align: center;
             display: inline-block;
+            margin: 4px 2px;
             transition-duration: 0.4s;
             font-style: italic;
         }
@@ -67,12 +68,11 @@
             background-color: rgba(0, 0, 0, 0.8);
             min-width: 200px;
             z-index: 1;
-            border-radius: 4px;
         }
 
         .dropdown-content a {
             color: white;
-            padding: 10px;
+            padding: 12px 16px;
             text-decoration: none;
             display: block;
         }
@@ -89,39 +89,30 @@
             color: #83F83F;
         }
 
-        header {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            align-items: center;
-            padding: 10px;
-            background-color: rgba(0, 0, 0, 0.7);
-        }
-
-        header img {
-            width: 40px;
-            height: 40px;
-        }
-
-        header nav {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-        }
-
-        header nav a {
-            font-size: 1em;
-            color: white;
-        }
-
         h1 {
             text-align: center;
-            font-size: 2em;
+            font-size: 2.5em;
             color: #83F83F;
-            margin: 20px 10px;
+            margin: 20px;
         }
 
         @media (max-width: 768px) {
+            h1 {
+                font-size: 2em;
+            }
+
+            .button {
+                height: 50px;
+                width: 150px;
+                font-size: 1em;
+            }
+
+            .dropdown-content {
+                min-width: 150px;
+            }
+        }
+
+        @media (max-width: 480px) {
             h1 {
                 font-size: 1.5em;
             }
@@ -130,22 +121,10 @@
                 height: 40px;
                 width: 120px;
                 font-size: 0.9em;
-                padding: 8px 16px;
             }
 
             .dropdown-content {
-                position: static;
-                min-width: 100%;
-                text-align: center;
-            }
-
-            header {
-                flex-direction: column;
-            }
-
-            header nav {
-                flex-direction: column;
-                align-items: center;
+                min-width: 120px;
             }
         }
     </style>
@@ -153,46 +132,61 @@
 
 <body>
     <header>
-        <div>
+        <h3 align="left">
             <a target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/profile.php?id=100087051957183">
-                <img src="Facebook.png" alt="Facebook">
+                <img src="Facebook.png" width="50" height="50" />
             </a>
             <a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/association__chlorobulle/">
-                <img src="images.jfif" alt="Instagram">
+                <img src="images.jfif" width="50" height="50" />
             </a>
-        </div>
-        <nav>
-            <a href="#">Accueil</a>
-            <div class="dropdown">
-                <a href="#" class="dropbtn">Qui nous sommes?</a>
-                <div class="dropdown-content">
-                    <a target="_blank" rel="noopener noreferrer" href="Qu’est-ce qu’une forêt nourricière.pdf">Qu’est-ce qu’une forêt nourricière?</a>
-                    <a target="_blank" rel="noopener noreferrer" href="Valeurs.pdf">Nos valeurs</a>
-                    <a target="_blank" rel="noopener noreferrer" href="QUI SOMMES-NOUS.pdf">Qui sommes-nous</a>
+            &nbsp;&nbsp;&nbsp;&nbsp;
+
+            <font face="cinzel" size="4">
+                <a href="#">Accueil</a>&nbsp;&nbsp;&nbsp;&nbsp;
+
+                <!-- Menu déroulant pour "Qui nous sommes?" -->
+                <div class="dropdown">
+                    <a href="#" class="dropbtn">Qui nous sommes?</a>&nbsp;&nbsp;&nbsp;&nbsp;
+                    <div class="dropdown-content">
+                        <a target="_blank" rel="noopener noreferrer" href="Qu’est-ce qu’une forêt nourricière.pdf">Qu’est-ce qu’une forêt nourricière?</a>
+                        <a target="_blank" rel="noopener noreferrer" href="Valeurs.pdf">Nos valeurs</a>
+                        <a target="_blank" rel="noopener noreferrer" href="QUI SOMMES-NOUS.pdf">Qui sommes-nous</a>
+                    </div>
                 </div>
-            </div>
-            <a target="_blank" rel="noopener noreferrer" href="Portfolio.html">Portfolio</a>
-            <a href="#">Videos</a>
-            <div class="dropdown">
-                <a href="#" class="dropbtn">l'actualité de Chloro’Bulle</a>
-                <div class="dropdown-content">
-                    <a target="_blank" rel="noopener noreferrer" href="La feuille de Chloro'Bulle n° 1.pdf">La feuille de Chloro'Bulle n° 1</a>
-                    <a target="_blank" rel="noopener noreferrer" href="La feuille de Chloro'Bulle n° 2.pdf">La feuille de Chloro'Bulle n° 2</a>
-                    <a target="_blank" rel="noopener noreferrer" href="La feuille de Chloro'Bulle n° 3.pdf">La feuille de Chloro'Bulle n° 3</a>
+
+                <a target="_blank" rel="noopener noreferrer" href="Portfolio.html">Portfolio</a>&nbsp;&nbsp;
+
+                <a href="#">Vidéos</a>&nbsp;&nbsp;&nbsp;&nbsp;
+
+                <!-- Menu déroulant pour "L'actualité de Chloro’Bulle" -->
+                <div class="dropdown">
+                    <a href="#" class="dropbtn">L'actualité de Chloro’Bulle</a>&nbsp;&nbsp;&nbsp;&nbsp;
+                    <div class="dropdown-content">
+                        <a target="_blank" rel="noopener noreferrer" href="La feuille de Chloro'Bulle n° 1.pdf">La feuille de Chloro'Bulle n° 1</a>
+                        <a target="_blank" rel="noopener noreferrer" href="La feuille de Chloro'Bulle n° 2.pdf">La feuille de Chloro'Bulle n° 2</a>
+                        <a target="_blank" rel="noopener noreferrer" href="La feuille de Chloro'Bulle n° 3.pdf">La feuille de Chloro'Bulle n° 3</a>
+                    </div>
                 </div>
-            </div>
-            <a target="_blank" rel="noopener noreferrer" href="soutenir.pdf">Nous soutenir</a>
-            <a target="_blank" rel="noopener noreferrer" href="argument vc.pdf">Nous contacter</a>
-        </nav>
+
+                <a target="_blank" rel="noopener noreferrer" href="soutenir.pdf">Nous soutenir</a>&nbsp;&nbsp;
+
+                <a target="_blank" rel="noopener noreferrer" href="argument vc.pdf">Nous contacter</a>&nbsp;&nbsp;
+            </font>
+        </h3>
     </header>
 
-    <h1>Bienvenue chez Chloro’Bulle<br>Plantons aujourd'hui l'Abondance de demain</h1>
+    <main>
+        <h1>
+            Bienvenue chez Chloro’Bulle<br />
+            Plantons aujourd'hui l'Abondance de demain
+        </h1>
 
-    <div style="text-align: center;">
-        <a href="#">
-            <button class="button button1">Rejoindre Chloro'Bulle</button>
-        </a>
-    </div>
+        <h3 align="center">
+            <a href="#">
+                <button class="button button1">Rejoindre Chloro'Bulle</button>
+            </a>
+        </h3>
+    </main>
 </body>
 
 </html>
