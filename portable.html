@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8">
+    <title>Bienvenue chez Chloro’Bulle</title>
+    <style>
+        body {
+            background-image: url('1.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        h1 {
+            text-align: center;
+            font-family: 'Miniver', cursive;
+            color: #83F83F;
+            margin-top: 150px;
+            line-height: 1.4;
+        }
+
+        .menu {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 10px;
+        }
+
+        .menu a {
+            margin: 0 15px;
+            color: white;
+            text-decoration: none;
+            font-size: 1.2em;
+        }
+
+        .menu a:hover {
+            color: #017bf5;
+        }
+
+        .dropdown {
+            position: relative;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: rgba(0, 0, 0, 0.9);
+            top: 100%;
+            left: 0;
+            min-width: 200px;
+            z-index: 1;
+            text-align: left;
+        }
+
+        .dropdown-content a {
+            display: block;
+            padding: 10px;
+            color: white;
+            text-decoration: none;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #017bf5;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .button {
+            display: inline-block;
+            margin: 30px auto;
+            padding: 10px 20px;
+            font-size: 1.5em;
+            color: white;
+            text-decoration: none;
+            background-color: transparent;
+            border: 2px solid white;
+            text-align: center;
+            cursor: pointer;
+        }
+
+        .button:hover {
+            background-color: white;
+            color: black;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2em;
+            }
+
+            .menu {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .menu a {
+                font-size: 1em;
+                margin: 5px 0;
+            }
+
+            .dropdown-content {
+                position: relative;
+                width: 100%;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="menu">
+        <a target="_blank" href="https://www.facebook.com/profile.php?id=100087051957183"><img src="Facebook.png" alt="Facebook" width="30" height="30"></a>
+        <a target="_blank" href="https://www.instagram.com/association__chlorobulle/"><img src="images.jfif" alt="Instagram" width="30" height="30"></a>
+        <a href="#">Accueil</a>
+        <div class="dropdown">
+            <a href="#" class="dropbtn">Qui nous sommes?</a>
+            <div class="dropdown-content">
+                <a target="_blank" href="Qu’est-ce qu’une forêt nourricière.pdf">Qu’est-ce qu’une forêt nourricière?</a>
+                <a target="_blank" href="Valeurs.pdf">Nos valeurs</a>
+                <a target="_blank" href="QUI SOMMES-NOUS.pdf">Qui sommes-nous</a>
+            </div>
+        </div>
+        <a target="_blank" href="Portfolio.html">Portfolio</a>
+        <a href="#">Videos</a>
+        <div class="dropdown">
+            <a href="#" class="dropbtn">L'actualité de Chloro’Bulle</a>
+            <div class="dropdown-content">
+                <a target="_blank" href="La feuille de Chloro'Bulle n° 1.pdf">La feuille de Chloro'Bulle n° 1</a>
+                <a target="_blank" href="La feuille de Chloro'Bulle n° 2.pdf">La feuille de Chloro'Bulle n° 2</a>
+                <a target="_blank" href="La feuille de Chloro'Bulle n° 3.pdf">La feuille de Chloro'Bulle n° 3</a>
+            </div>
+        </div>
+        <a target="_blank" href="soutenir.pdf">Nous soutenir</a>
+        <a target="_blank" href="argument vc.pdf">Nous contacter</a>
+    </div>
+
+    <h1>Bienvenue chez Chloro’Bulle<br>Plantons aujourd'hui l'Abondance de demain</h1>
+
+    <a href="#" class="button">Rejoindre Chloro'Bulle</a>
+</body>
+
+</html>
