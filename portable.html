@@ -1,197 +1,151 @@
-<!DOCTYPE html>
+  <!DOCTYPE html>
 <html lang="fr">
-
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chloro’Bulle - Bienvenue</title>
-    <style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chloro’Bulle - Bienvenue</title>
+  <style>
+    body {
+      background-image: url('1.jpg');
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      margin: 0;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
 
+    /* NAVBAR */
+    .navbar {
+      background-color: #333;
+      display: flex;
+      justify-content: center;
+      padding: 10px 20px;
+    }
 
-        body {
-            background-image: url('1.jpg');
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
-            height: 100vh;
-            margin: 0;
-        }
+    .navbar a {
+      color: white;
+      text-decoration: none;
+      padding: 14px 20px;
+      display: inline-block;
+    }
 
-        .navbar {
-            background-color: #333;
-            overflow: hidden;
-            display: flex;
-            justify-content: space-between;
-            flex-wrap: wrap;
-            padding: 10px 20px;
-        }
+    .navbar a:hover {
+      background-color: #575757;
+      transition: 0.3s;
+    }
 
-        .navbar a,
-        .navbar span.dropbtn {
-            color: white;
-            text-decoration: none;
-            padding: 14px 20px;
-            display: inline-block;
-            cursor: pointer;
-        }
+    /* Contenu principal */
+    .content {
+      flex: 1; /* pousse le footer en bas */
+    }
 
-        .navbar a:hover,
-        .navbar span.dropbtn:hover {
-            background-color: #575757;
-            transition: 0.3s;
-        }
- 
-        .button {
-            cursor: pointer;
-            border: 1px solid #000b;
-            background-color: rgba(24, 100, 171, 0.1);
-            height: 100px;
-            width: 200px;
-            color: #fff;
-            font-size: 1.5em;
-            box-shadow: 0 6px 6px rgba(0, 0, 0, 0.6);
-            padding: 16px 32px;
-            text-align: center;
-            display: inline-block;
-            transition-duration: 0.4s;
-            font-style: italic;
-        }
+    /* FOOTER */
+    footer {
+      background-color: #333;
+      color: white;
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
 
-        .button1 {
-            background-color: transparent;
-            color: white;
-            border: 2px solid #000;
-        }
+    /* Dropdown */
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
 
-        .button1:hover {
-            background-color: #fff;
-            color: black;
-        }
+    .dropbtn {
+      background-color: #04AA6D;
+      color: white;
+      padding: 14px 20px;
+      font-size: 16px;
+      border: none;
+      cursor: pointer;
+    }
 
-        @media screen and (max-width: 768px) {
-            .navbar {
-                flex-direction: column;
-            }
+    .dropbtn:hover {
+      background-color: #3e8e41;
+    }
 
-            .navbar a,
-            .navbar .dropdown {
-                width: 100%;
-                text-align: left;
-                padding: 10px 0;
-            } 
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      bottom: 50px; /* affichage au-dessus du footer */
+      background-color: #f9f9f9;
+      min-width: 160px;
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+      z-index: 1;
+    }
 
-            .dropbtn {
-  background-color: #04AA6D;
-  color: white;
-  padding: 16px;
-  font-size: 16px;
-  border: none;
-  cursor: pointer;
-}
+    .dropdown-content a {
+      color: black;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+    }
 
-.dropdown {
-  position: relative;
-  display: inline-block;
-}
+    .dropdown-content a:hover {
+      background-color: #f1f1f1;
+    }
 
-.dropdown-content {
-  display: none;
-  position: absolute;
-  right: 0;
-  background-color: #f9f9f9;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
-}
-
-.dropdown-content a {
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-}
-
-
-
-            
-footer {
-  text-align: center;
-  padding: 3px;
-  background-color: #333;
-  color: #333;
-}
-        }
-    </style>
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+  </style>
 </head>
 
 <body>
-    <!-- Barre de navigation -->
-    <div class="navbar">
-        <a href="#">Accueil</a>
-        <a href="#">Portfolio</a>
+  <!-- Barre de navigation en haut -->
+  <div class="navbar">
+    <a href="#">Accueil</a>
+    <a href="#">Portfolio</a>
+    <a target="_blank" href="soutenir.pdf">Nous soutenir</a>
+    <a target="_blank" href="argument.pdf">Nous contacter</a>
+  </div>
 
-       
-        <a target="_blank" href="soutenir.pdf">Nous soutenir</a>
-        <a target="_blank" href="argument.pdf">Nous contacter</a>
+  <!-- Contenu -->
+  <div class="content">
+    <h1 align="center" style="margin-top:100px; color:#83F83F; font-family:Miniver, sans-serif;">
+      Bienvenue chez Chloro’Bulle! <br>
+      Plantons aujourd'hui l'Abondance de demain
+    </h1>
+
+    <h3 align="center">
+      <a href="#">
+        <button style="cursor:pointer; border:2px solid #000; background:transparent; color:white; padding:15px 30px; font-size:1.2em;">
+          Rejoindre Chloro'Bulle
+        </button>
+      </a>
+    </h3>
+  </div>
+
+  <!-- Footer avec menus déroulants -->
+  <footer>
+    <div class="dropdown">
+      <button class="dropbtn">Left</button>
+      <div class="dropdown-content">
+        <a href="#">Lien 1</a>
+        <a href="#">Lien 2</a>
+        <a href="#">Lien 3</a>
+      </div>
     </div>
 
-    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
-    <h1 align="center">
-        <font face="Miniver" color="#83F83F" size="7" class="italic">
-            Bienvenue chez Chloro’Bulle!
-            <br />
-            Plantons aujourd'hui l'Abondance de demain 
-        </font>
-    </h1>
-    <br />
-    <h3 align="center">
-        <a href="#">
-            <button class="button button1">Rejoindre Chloro'Bulle</button>
-            <br /><br />
-        </a>
-    </h3>
+    <p>&copy; 2025 Chloro’Bulle - Tous droits réservés</p>
 
-     
-    </script>
-
-
-
-     
-<footer>
-
-
-<div class="dropdown" style="float:left;">
-  <button class="dropbtn">Left</button>
-  <div class="dropdown-content" style="left:0;">
-    <a href="#">Link 1</a>
-    <a href="#">Link 2</a>
-    <a href="#">Link 3</a>
-  </div>
-</div>
-
-<div class="dropdown" style="float:right;">
-  <button class="dropbtn">Right</button>
-  <div class="dropdown-content">
-    <a href="#">Link 1</a>
-    <a href="#">Link 2</a>
-    <a href="#">Link 3</a>
-  </div>
-</div>
-
-        </footer>
-
-    
+    <div class="dropdown">
+      <button class="dropbtn">Right</button>
+      <div class="dropdown-content">
+        <a href="#">Lien A</a>
+        <a href="#">Lien B</a>
+        <a href="#">Lien C</a>
+      </div>
+    </div>
+  </footer>
 </body>
-
-         
-<div class="dropdown">
-            <span class="dropbtn">Qui nous sommes?</span>
-            <div class="dropdown-content">
-                <a target="_blank" href="dropdown/Qu’est-ce qu’une forêt nourricière.html">Qu’est-ce qu’une forêt nourricière?</a>
-                <a target="_blank" href="dropdown/Valeurs.html">Nos valeurs</a>
-                <a target="_blank" href="dropdown/QUI SOMMES-NOUS.html">Qui sommes-nous?</a>
-            </div>
-        </div>
+</html>
 
 
