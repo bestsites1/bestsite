@@ -122,7 +122,7 @@
 footer {
   text-align: center;
   padding: 3px;
-  background-color: DarkSalmon;
+  background-color: #333;
   color: #333;
 }
         }
@@ -145,7 +145,7 @@ footer {
         <font face="Miniver" color="#83F83F" size="7" class="italic">
             Bienvenue chez Chloro’Bulle!
             <br />
-            Plantons aujourd'hui l'Abondance de demainsssssss
+            Plantons aujourd'hui l'Abondance de demain 
         </font>
     </h1>
     <br />
@@ -156,36 +156,21 @@ footer {
         </a>
     </h3>
 
-    <!-- Script JS pour menus déroulants -->
-    <script>
-        function closeAllDropdowns() {
-            document.querySelectorAll(".dropdown-content").forEach(menu => {
-                menu.classList.remove("show");
-            });
-        }
-
-        document.querySelectorAll(".dropbtn").forEach(btn => {
-            btn.addEventListener("click", function (e) {
-                e.stopPropagation();
-                const content = this.nextElementSibling;
-                const isVisible = content.classList.contains("show");
-                closeAllDropdowns();
-                if (!isVisible) {
-                    content.classList.add("show");
-                }
-            });
-        });
-
-        window.addEventListener("click", function () {
-            closeAllDropdowns();
-        });
+     
     </script>
 
 
 
      
 <footer>
-        
+
+
+        </footer>
+
+    
+</body>
+
+         
 <div class="dropdown">
             <span class="dropbtn">Qui nous sommes?</span>
             <div class="dropdown-content">
@@ -194,39 +179,5 @@ footer {
                 <a target="_blank" href="dropdown/QUI SOMMES-NOUS.html">Qui sommes-nous?</a>
             </div>
         </div>
- 
-
-        <div class="dropdown">
-            <span class="dropbtn">L'actualité</span>
-            <div class="dropdown-content">
-                <a target="_blank" href="dropdown/La feuille de Chloro'Bulle n° 1.html">La feuille de Chloro'Bulle n° 1</a>
-                <a target="_blank" href="dropdown/La feuille de Chloro'Bulle n° 2.html">La feuille de Chloro'Bulle n° 2</a>
-                <a target="_blank" href="dropdown/La feuille de Chloro'Bulle n° 3.html">La feuille de Chloro'Bulle n° 3</a>
-            </div>
-        </div>
-
-        <a target="_blank" href="soutenir.pdf">Nous soutenir</a>
-        <a target="_blank" href="argument.pdf">Nous contacter</a>
-    </div>
-
-    <a target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/profile.php?id=100087051957183">
-            <img src="Facebook.png" width="50" height="50" />
-        </a>
-        <a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/association__chlorobulle/">
-            <img src="images.jfif" width="50" height="50" />
-    </div>
-
-
-        </footer>
-
-    
-</body>
-
- 
-</html>
-
-
-
-
 
 
